@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,sum=0,i,m=10,o=1,l;
+    printf("enter length of number");
+    scanf("%d",&l);
+    printf("enter the number");
+    scanf("%d", &n);
+    for(i=0;i<l;i++)
+    {
+        sum+=(n%m)/o;
+        n=n-(n%m)/m;
+        m*=10;
+        o*=10;
+    }
+    printf("sum is %d",sum);
+   
+    return 0;
+}
